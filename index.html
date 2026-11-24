@@ -219,7 +219,7 @@ const error = document.getElementById('form-error');
 let model;
 
 function clearResult() {
-  output.textContent = '鈥�';
+  output.textContent = '—';
   meter.value = 0;
   help.textContent = 'Enter all seven values to calculate a prediction.';
   if (model) error.hidden = true;
@@ -1139,7 +1139,7 @@ try {
             </div>
           </div>
           <div class="actions">
-            <button class="primary" type="submit" id="calculate" disabled>Calculate probability <span aria-hidden="true">鈫�</span></button>
+            <button class="primary" type="submit" id="calculate" disabled>Calculate probability <span aria-hidden="true">→</span></button>
             <button class="link-button reset" type="reset">Reset</button>
           </div>
           <p id="form-error" class="error" role="alert" hidden></p>
@@ -1150,7 +1150,7 @@ try {
       <aside class="result-card" aria-labelledby="result-title">
         <div class="result-content">
           <h2 id="result-title">Predicted probability</h2>
-          <div class="result-value" id="probability" aria-live="polite" aria-atomic="true">鈥�</div>
+          <div class="result-value" id="probability" aria-live="polite" aria-atomic="true">—</div>
           <meter id="probability-meter" min="0" max="1" value="0" aria-label="Predicted probability"></meter>
           <div class="meter-labels" aria-hidden="true"><span>0%</span><span>50%</span><span>100%</span></div>
           <p id="result-help" class="result-help">Enter all seven values to calculate a prediction.</p>
@@ -1161,7 +1161,7 @@ try {
 
     <details id="model-details" class="model-details">
       <summary>About the FT-NODE model</summary>
-      <p>FT-NODE combines a feature tokenizer and Transformer encoder with differentiable decision trees and a single prediction head. This calculator runs the model fitted on 778 training records. It reports the model鈥檚 estimated probability for the study outcome.</p>
+      <p>FT-NODE combines a feature tokenizer and Transformer encoder with differentiable decision trees and a single prediction head. This calculator runs the model fitted on 778 training records. It reports the model’s estimated probability for the study outcome.</p>
       <p>The example values are synthetic. RDW stands for red cell distribution width, and INR stands for international normalized ratio.</p>
     </details>
     <footer>For research use only.</footer>
